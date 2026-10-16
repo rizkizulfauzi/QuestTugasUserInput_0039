@@ -373,4 +373,25 @@ fun PilihanSkill(
             fontSize = dimensionResource(id = R.dimen.ukuran_judul_skill).value.sp,
             fontWeight = FontWeight.Bold
         )
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            daftarSkill.forEach { skill ->
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = skill in skillTerpilih,
+                        onCheckedChange = { dipilih -> onSkillChange(skill, dipilih) }
+                    )
+                    Text(
+                        text = skill,
+                        fontSize = dimensionResource(id = R.dimen.ukuran_teks_skill).value.sp
+                    )
+                }
+            }
+        }
+    }
+}
 }
