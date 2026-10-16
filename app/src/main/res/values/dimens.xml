@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="padding_layar">24dp</dimen>
+    <dimen name="jarak_komponen">16dp</dimen>
+    <dimen name="jarak_field">8dp</dimen>
+    <dimen name="jarak_judul">4dp</dimen>
+    <dimen name="jarak_indikator">4dp</dimen>
+    <dimen name="radius_kartu">32dp</dimen>
+    <dimen name="radius_field">24dp</dimen>
+    <dimen name="elevasi_kartu">8dp</dimen>
+    <dimen name="tinggi_tombol">56dp</dimen>
+    <dimen name="ukuran_judul">32dp</dimen>
+    <dimen name="ukuran_subjudul">12dp</dimen>
+    <dimen name="ukuran_judul_skill">14dp</dimen>
+    <dimen name="ukuran_teks_skill">12dp</dimen>
+    <dimen name="ukuran_teks_tombol">14dp</dimen>
+    <dimen name="ukuran_indikator">6dp</dimen>
+    <dimen name="tinggi_gambar">300dp</dimen>
+    <dimen name="tumpang_tindih_kartu">32dp</dimen>
+
+    <integer name="jumlah_indikator">4</integer>
+</resources>
