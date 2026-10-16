@@ -128,4 +128,13 @@ fun BiodataScreen() {
                         color = colorResource(id = R.color.putih_kartu),
                         shape = bentukKartu
                     )
-            ) }
+            ) {
+                Column(
+                    modifier = Modifier
+                        .verticalScroll(rememberScrollState())
+                        .padding(dimensionResource(id = R.dimen.padding_layar)),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(
+                        dimensionResource(id = R.dimen.jarak_komponen)
+                    )
+                ) }
