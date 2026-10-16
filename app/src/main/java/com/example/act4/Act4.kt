@@ -186,4 +186,24 @@ fun BiodataScreen() {
         }
     }
 }
+
+@Composable
+fun FormHeader() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_judul))
+    ) {
+        Text(
+            text = stringResource(id = R.string.judul_form),
+            color = colorResource(id = R.color.ungu_utama),
+            fontSize = dimensionResource(id = R.dimen.ukuran_judul).value.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = stringResource(id = R.string.subjudul_form),
+            color = colorResource(id = R.color.abu_teks),
+            fontSize = dimensionResource(id = R.dimen.ukuran_subjudul).value.sp
+        )
+    }
+}
 }
