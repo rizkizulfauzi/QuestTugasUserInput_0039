@@ -216,4 +216,27 @@ fun FieldNama(
     onNamaDepanChange: (String) -> Unit,
     namaBelakang: String,
     onNamaBelakangChange: (String) -> Unit
-) }
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_field))
+    ) {
+        OutlinedTextField(
+            value = namaDepan,
+            onValueChange = onNamaDepanChange,
+            singleLine = true,
+            shape = bentukField(),
+            label = { Text(text = stringResource(id = R.string.label_nama_depan)) },
+            modifier = Modifier.weight(1f)
+        )
+        OutlinedTextField(
+            value = namaBelakang,
+            onValueChange = onNamaBelakangChange,
+            singleLine = true,
+            shape = bentukField(),
+            label = { Text(text = stringResource(id = R.string.label_nama_belakang)) },
+            modifier = Modifier.weight(1f)
+        )
+    }
+}
+}
