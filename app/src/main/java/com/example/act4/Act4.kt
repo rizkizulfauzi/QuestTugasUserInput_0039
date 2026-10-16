@@ -394,4 +394,30 @@ fun PilihanSkill(
         }
     }
 }
+
+@Composable
+fun TombolProceed(
+    aktif: Boolean,
+    onClick: () -> Unit
+) {
+    Button(
+        onClick = onClick,
+        enabled = aktif,
+        shape = bentukField(),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = colorResource(id = R.color.ungu_utama),
+            contentColor = colorResource(id = R.color.putih_kartu),
+            disabledContainerColor = colorResource(id = R.color.abu_tombol_nonaktif),
+            disabledContentColor = colorResource(id = R.color.putih_kartu)
+        ),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(dimensionResource(id = R.dimen.tinggi_tombol))
+    ) {
+        Text(
+            text = stringResource(id = R.string.tombol_proceed),
+            fontSize = dimensionResource(id = R.dimen.ukuran_teks_tombol).value.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }
 }
