@@ -239,4 +239,19 @@ fun FieldNama(
         )
     }
 }
+
+@Composable
+fun FieldEmail(
+    email: String,
+    onEmailChange: (String) -> Unit
+) {
+    OutlinedTextField(
+        value = email,
+        onValueChange = onEmailChange,
+        singleLine = true,
+        shape = bentukField(),
+        label = { Text(text = stringResource(id = R.string.label_email)) },
+        modifier = Modifier.fillMaxWidth()
+    )
+}
 }
