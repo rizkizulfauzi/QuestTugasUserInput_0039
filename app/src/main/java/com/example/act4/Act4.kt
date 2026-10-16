@@ -168,4 +168,22 @@ fun BiodataScreen() {
                             onTerpilihChange = { experience = it },
                             modifier = Modifier.weight(1f)
                         )
-                    }}
+                    }
+
+                    PilihanSkill(
+                        skillTerpilih = skillTerpilih,
+                        onSkillChange = { skill, dipilih ->
+                            if (dipilih) skillTerpilih.add(skill) else skillTerpilih.remove(skill)
+                        }
+                    )
+
+                    TombolProceed(
+                        aktif = dataLengkap,
+                        onClick = { }
+                    )
+                }
+            }
+        }
+    }
+}
+}
