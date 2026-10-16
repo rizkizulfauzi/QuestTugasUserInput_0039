@@ -209,4 +209,11 @@ fun FormHeader() {
 
 @Composable
 fun bentukField() = RoundedCornerShape(dimensionResource(id = R.dimen.radius_field))
-}
+
+@Composable
+fun FieldNama(
+    namaDepan: String,
+    onNamaDepanChange: (String) -> Unit,
+    namaBelakang: String,
+    onNamaBelakangChange: (String) -> Unit
+) }
