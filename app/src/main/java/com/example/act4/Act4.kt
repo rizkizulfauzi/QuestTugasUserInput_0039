@@ -206,4 +206,7 @@ fun FormHeader() {
         )
     }
 }
+
+@Composable
+fun bentukField() = RoundedCornerShape(dimensionResource(id = R.dimen.radius_field))
 }
