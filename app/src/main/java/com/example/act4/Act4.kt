@@ -356,4 +356,9 @@ fun DropdownExperience(
         }
     }
 }
-}
+
+@Composable
+fun PilihanSkill(
+    skillTerpilih: List<String>,
+    onSkillChange: (String, Boolean) -> Unit
+) }
