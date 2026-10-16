@@ -137,4 +137,17 @@ fun BiodataScreen() {
                     verticalArrangement = Arrangement.spacedBy(
                         dimensionResource(id = R.dimen.jarak_komponen)
                     )
-                ) }
+                ) {
+                    FormHeader()
+
+                    FieldNama(
+                        namaDepan = namaDepan,
+                        onNamaDepanChange = { namaDepan = it },
+                        namaBelakang = namaBelakang,
+                        onNamaBelakangChange = { namaBelakang = it }
+                    )
+
+                    FieldEmail(
+                        email = email,
+                        onEmailChange = { email = it }
+                    )}
