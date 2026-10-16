@@ -64,4 +64,11 @@ fun BiodataScreen() {
     var experience by remember { mutableStateOf("") }
     val skillTerpilih = remember { mutableStateListOf<String>() }
 
+    val dataLengkap = namaDepan.isNotBlank() &&
+            namaBelakang.isNotBlank() &&
+            email.isNotBlank() &&
+            tglLahir.isNotBlank() &&
+            experience.isNotBlank() &&
+            skillTerpilih.isNotEmpty()
+
 }
