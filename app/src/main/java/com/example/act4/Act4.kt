@@ -361,4 +361,16 @@ fun DropdownExperience(
 fun PilihanSkill(
     skillTerpilih: List<String>,
     onSkillChange: (String, Boolean) -> Unit
-) }
+) {
+    val daftarSkill = stringArrayResource(id = R.array.daftar_skill)
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_field))
+    ) {
+        Text(
+            text = stringResource(id = R.string.judul_skill),
+            fontSize = dimensionResource(id = R.dimen.ukuran_judul_skill).value.sp,
+            fontWeight = FontWeight.Bold
+        )
+}
