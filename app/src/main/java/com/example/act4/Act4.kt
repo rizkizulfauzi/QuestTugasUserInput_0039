@@ -86,4 +86,13 @@ fun BiodataScreen() {
                     .align(Alignment.TopCenter)
                     .fillMaxWidth()
                     .height(dimensionResource(id = R.dimen.tinggi_gambar))
-            )}
+            )
+
+            Row(
+                modifier = Modifier
+                    .padding(top = innerPadding.calculateTopPadding())
+                    .padding(dimensionResource(id = R.dimen.padding_layar)),
+                horizontalArrangement = Arrangement.spacedBy(
+                    dimensionResource(id = R.dimen.jarak_indikator)
+                )
+            ) }
