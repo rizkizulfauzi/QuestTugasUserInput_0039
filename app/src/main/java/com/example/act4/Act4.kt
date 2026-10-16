@@ -79,7 +79,7 @@ fun BiodataScreen() {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         Box(modifier = Modifier.fillMaxSize()) {
             Image(
-                painter = painterResource(id = R.drawable.mobil),
+                painter = painterResource(id = R.drawable.njoel),
                 contentDescription = stringResource(id = R.string.deskripsi_gambar_header),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
