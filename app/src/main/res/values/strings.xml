@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Act4</string>
+    <string name="judul_form">Form Biodata</string>
+    <string name="subjudul_form">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="label_nama_depan">Nama Depan</string>
+    <string name="label_nama_belakang">Nama Belakang</string>
+    <string name="label_email">Email</string>
+    <string name="label_tgl_lahir">Tgl Lahir</string>
+    <string name="label_experience">Experience</string>
+    <string name="judul_skill">Pilih Skill Anda :</string>
+    <string name="tombol_proceed">Proceed</string>
+    <string name="tombol_ok">OK</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="deskripsi_gambar_header">Gambar mobil</string>
+    <string name="deskripsi_ikon_kalender">Pilih tanggal lahir</string>
+    <string name="format_tanggal">dd/MM/yyyy</string>
+</resources>
