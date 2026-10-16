@@ -150,4 +150,22 @@ fun BiodataScreen() {
                     FieldEmail(
                         email = email,
                         onEmailChange = { email = it }
-                    )}
+                    )
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(
+                            dimensionResource(id = R.dimen.jarak_field)
+                        )
+                    ) {
+                        FieldTanggalLahir(
+                            tanggal = tglLahir,
+                            onTanggalChange = { tglLahir = it },
+                            modifier = Modifier.weight(1f)
+                        )
+                        DropdownExperience(
+                            terpilih = experience,
+                            onTerpilihChange = { experience = it },
+                            modifier = Modifier.weight(1f)
+                        )
+                    }}
