@@ -312,4 +312,112 @@ fun FieldTanggalLahir(
         }
     }
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DropdownExperience(
+    terpilih: String,
+    onTerpilihChange: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    var terbuka by remember { mutableStateOf(false) }
+    val daftarExperience = stringArrayResource(id = R.array.daftar_experience)
+
+    ExposedDropdownMenuBox(
+        expanded = terbuka,
+        onExpandedChange = { terbuka = !terbuka },
+        modifier = modifier
+    ) {
+        OutlinedTextField(
+            value = terpilih,
+            onValueChange = {},
+            readOnly = true,
+            singleLine = true,
+            shape = bentukField(),
+            label = { Text(text = stringResource(id = R.string.label_experience)) },
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = terbuka) },
+            modifier = Modifier
+                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+                .fillMaxWidth()
+        )
+        ExposedDropdownMenu(
+            expanded = terbuka,
+            onDismissRequest = { terbuka = false }
+        ) {
+            daftarExperience.forEach { pilihan ->
+                DropdownMenuItem(
+                    text = { Text(text = pilihan) },
+                    onClick = {
+                        onTerpilihChange(pilihan)
+                        terbuka = false
+                    }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun PilihanSkill(
+    skillTerpilih: List<String>,
+    onSkillChange: (String, Boolean) -> Unit
+) {
+    val daftarSkill = stringArrayResource(id = R.array.daftar_skill)
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_field))
+    ) {
+        Text(
+            text = stringResource(id = R.string.judul_skill),
+            fontSize = dimensionResource(id = R.dimen.ukuran_judul_skill).value.sp,
+            fontWeight = FontWeight.Bold
+        )
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            daftarSkill.forEach { skill ->
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = skill in skillTerpilih,
+                        onCheckedChange = { dipilih -> onSkillChange(skill, dipilih) }
+                    )
+                    Text(
+                        text = skill,
+                        fontSize = dimensionResource(id = R.dimen.ukuran_teks_skill).value.sp
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun TombolProceed(
+    aktif: Boolean,
+    onClick: () -> Unit
+) {
+    Button(
+        onClick = onClick,
+        enabled = aktif,
+        shape = bentukField(),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = colorResource(id = R.color.ungu_utama),
+            contentColor = colorResource(id = R.color.putih_kartu),
+            disabledContainerColor = colorResource(id = R.color.abu_tombol_nonaktif),
+            disabledContentColor = colorResource(id = R.color.putih_kartu)
+        ),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(dimensionResource(id = R.dimen.tinggi_tombol))
+    ) {
+        Text(
+            text = stringResource(id = R.string.tombol_proceed),
+            fontSize = dimensionResource(id = R.dimen.ukuran_teks_tombol).value.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }
 }
